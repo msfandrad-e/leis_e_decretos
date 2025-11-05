@@ -4,7 +4,7 @@ import plotly.express as px
 from io import BytesIO
 
 # --- CONFIGURAÇÃO DA PÁGINA ---
-st.set_page_config(page_title="Análise de Situações", layout="wide")
+st.set_page_config(page_title="Dados NotebookLM MB", layout="wide")
 
 # --- SIDEBAR ---
 st.sidebar.header("📂 Upload da Planilha")
@@ -437,4 +437,5 @@ with st.expander("ℹ️ Informações sobre a Análise"):
 
 st.caption(
     f"Arquivo carregado: {uploaded_file.name} | Última atualização: {pd.Timestamp.now().strftime('%d/%m/%Y %H:%M')}")
+
 
