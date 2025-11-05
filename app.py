@@ -94,7 +94,7 @@ else:
     colunas_tabela = [filtro]
 
 # --- MÉTRICAS PRINCIPAIS ---
-st.markdown("## 📈 Métricas Principais")
+st.markdown("#### 📈 Métricas Principais")
 
 if filtro == "Todos":
     total_geral = sum(totais.values())
@@ -120,7 +120,7 @@ with col4:
     st.metric("Colunas com Dados", colunas_preenchidas)
 
 # --- GRÁFICO DONUT ---
-st.markdown("## 📊 Distribuição Visual")
+st.markdown("## 📊 Gráfico Visual")
 
 if total_geral > 0:
     if filtro == "Todos":
@@ -188,7 +188,7 @@ if (filtro == "ENCONTRADAS" or filtro == "Todos") and totais["ENCONTRADAS"] > 0:
                             box-shadow: 0 1px 2px rgba(0,0,0,0.1);
                             font-size: 14px;
                         ">
-                            <strong style="color: #155724; font-size: 13px;">✅ {encontrada}</strong>
+                            <strong style="color: #155724; font-size: 15px;">✅ {encontrada}</strong>
                         </div>
                         """,
                         unsafe_allow_html=True
@@ -219,7 +219,7 @@ if (filtro == "NÃO ENCONTRADAS" or filtro == "Todos") and totais["NÃO ENCONTRA
                             box-shadow: 0 1px 2px rgba(0,0,0,0.1);
                             font-size: 14px;
                         ">
-                            <strong style="color: #721c24; font-size: 13px;">❌ {nao_encontrada}</strong>
+                            <strong style="color: #721c24; font-size: 15px;">❌ {nao_encontrada}</strong>
                         </div>
                         """,
                         unsafe_allow_html=True
@@ -250,7 +250,7 @@ if (filtro == "ATUALIZADAS" or filtro == "Todos") and totais["ATUALIZADAS"] > 0:
                             box-shadow: 0 1px 2px rgba(0,0,0,0.1);
                             font-size: 14px;
                         ">
-                            <strong style="color: #004085; font-size: 13px;">🔄 {atualizada}</strong>
+                            <strong style="color: #004085; font-size: 15px;">🔄 {atualizada}</strong>
                         </div>
                         """,
                         unsafe_allow_html=True
@@ -281,7 +281,7 @@ if (filtro == "OUTRAS SITUAÇÕES" or filtro == "Todos") and totais["OUTRAS SITU
                             box-shadow: 0 1px 2px rgba(0,0,0,0.1);
                             font-size: 14px;
                         ">
-                            <strong style="color: #666; font-size: 13px;">📝 {outra}</strong>
+                            <strong style="color: #666; font-size: 15px;">📝 {outra}</strong>
                         </div>
                         """,
                         unsafe_allow_html=True
@@ -325,10 +325,10 @@ if (filtro == "REVOGADAS" or filtro == "Todos") and totais["REVOGADAS"] > 0:
                         ">
                             <div style="display: flex; justify-content: space-between; align-items: center;">
                                 <div style="flex: 1;">
-                                    <strong style="color: #333; font-size: 13px;">🔴 {revogada}</strong>
+                                    <strong style="color: #333; font-size: 15px;">🔴 {revogada}</strong>
                                 </div>
                                 <div style="flex: 2; margin-left: 15px;">
-                                    <span style="color: #666; font-size: 13px;"><strong>Motivo:</strong> {motivo_exibicao}</span>
+                                    <span style="color: #666; font-size: 15px;"><strong>Motivo:</strong> {motivo_exibicao}</span>
                                 </div>
                             </div>
                         </div>
@@ -437,3 +437,4 @@ with st.expander("ℹ️ Informações sobre a Análise"):
 
 st.caption(
     f"Arquivo carregado: {uploaded_file.name} | Última atualização: {pd.Timestamp.now().strftime('%d/%m/%Y %H:%M')}")
+
