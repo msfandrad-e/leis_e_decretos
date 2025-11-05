@@ -14,7 +14,7 @@ uploaded_file = st.sidebar.file_uploader(
 )
 
 # --- CONTEÚDO PRINCIPAL ---
-st.title("📊 Dashboard Interativo de Situações")
+st.title("📊 Dashboard NotebookLM MB")
 
 if not uploaded_file:
     st.info("👈 Faça o upload de uma planilha no menu lateral para começar a análise.")
@@ -136,7 +136,7 @@ if total_geral > 0:
                 df_grafico,
                 names="Categoria",
                 values="Quantidade",
-                title="Distribuição Geral das Situações",
+                title="Situação dos dados NotebookLM MB",
                 hole=0.4,
                 color_discrete_sequence=px.colors.qualitative.Set3
             )
@@ -437,5 +437,6 @@ with st.expander("ℹ️ Informações sobre a Análise"):
 
 st.caption(
     f"Arquivo carregado: {uploaded_file.name} | Última atualização: {pd.Timestamp.now().strftime('%d/%m/%Y %H:%M')}")
+
 
 
