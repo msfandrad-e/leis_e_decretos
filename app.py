@@ -22,7 +22,6 @@ if not uploaded_file:
 
 
 # --- LEITURA DO ARQUIVO ---
-@st.cache_data
 def load_data(file):
     """Carrega os dados do arquivo com tratamento de erros"""
     try:
@@ -433,6 +432,7 @@ with st.expander("ℹ️ Informações sobre a Análise"):
 
 st.caption(
     f"Arquivo carregado: {uploaded_file.name} | Última atualização: {pd.Timestamp.now().strftime('%d/%m/%Y %H:%M')}")
+
 
 
 
