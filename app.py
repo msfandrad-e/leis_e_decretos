@@ -429,14 +429,11 @@ with st.expander("ℹ️ Informações sobre a Análise"):
     - Expanda as seções abaixo para ver os detalhes de cada categoria
     - Analise os dados completos na tabela no final
     - Exporte os resultados para Excel
-
-    **Colunas necessárias:**
-    - ENCONTRADAS, NÃO ENCONTRADAS, REVOGADAS
-    - MOTIVO DA REVOGAÇÃO, ATUALIZADAS, OUTRAS SITUAÇÕES
     """)
 
 st.caption(
     f"Arquivo carregado: {uploaded_file.name} | Última atualização: {pd.Timestamp.now().strftime('%d/%m/%Y %H:%M')}")
+
 
 
 
